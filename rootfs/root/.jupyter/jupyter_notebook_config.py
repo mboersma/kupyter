@@ -13,7 +13,7 @@
 #c.Application.log_format = '[%(name)s]%(highlevel)s %(message)s'
 
 ## Set the log level by value or name.
-#c.Application.log_level = 30
+c.Application.log_level = 'DEBUG'
 
 #------------------------------------------------------------------------------
 # JupyterApp(Application) configuration
@@ -110,7 +110,7 @@ c.JupyterApp.answer_yes = True
 #  connection, or for offline use of the notebook.
 #
 #  When disabled, equations etc. will appear as their untransformed TeX source.
-#c.NotebookApp.enable_mathjax = True
+c.NotebookApp.enable_mathjax = False
 
 ## extra paths to look for Javascript notebook extensions
 #c.NotebookApp.extra_nbextensions_path = []
@@ -141,7 +141,7 @@ c.JupyterApp.answer_yes = True
 #c.NotebookApp.iopub_msg_rate_limit = 0
 
 ## The IP address the notebook server will listen on.
-#c.NotebookApp.ip = 'localhost'
+c.NotebookApp.ip = '*'
 
 ## Supply extra arguments that will be passed to Jinja environment.
 #c.NotebookApp.jinja_environment_options = {}
@@ -270,7 +270,7 @@ c.NotebookApp.open_browser = False
 #c.ConnectionFileMixin.stdin_port = 0
 
 ##
-#c.ConnectionFileMixin.transport = 'tcp'
+# c.ConnectionFileMixin.transport = 'tcp'
 
 #------------------------------------------------------------------------------
 # KernelManager(ConnectionFileMixin) configuration
