@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: kupyter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ipycontroller
+  template:
+    metadata:
+      labels:
+        app: ipycontroller
+    spec:
+      containers:
+        - name: ipycontroller
+          image: quay.io/mboersma/kupyter
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 8888
+          command: ["ipcontroller"]

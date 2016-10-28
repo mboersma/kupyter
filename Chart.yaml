@@ -1,0 +1,4 @@
+apiVersion: v1
+description: IPyParallel for Kubernetes
+name: kupyter
+version: 0.1.0
